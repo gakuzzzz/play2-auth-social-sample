@@ -1,0 +1,12 @@
+@()
+
+@main("play2-auth social sample") {
+
+<ul>
+    <li><a href="@routes.SessionController.loginByOpenId(models.account.OpenIdProvider.Yahoo)"><img src="http://i.yimg.jp/images/login/btn/btnXSYid.gif" width="241" height="28" alt="Yahoo! JAPAN IDでログイン" border="0"></a></li>
+    <li><a href="@routes.SessionController.loginByOpenId(models.account.OpenIdProvider.Mixi)"><img src="http://developer.mixi.co.jp/about-platform/policies/image_guidelines/login_btn002.gif"></a></li>
+</ul>
+
+
+
+}

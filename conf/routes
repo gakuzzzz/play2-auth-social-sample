@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+
+
+GET     /sessions/                 controllers.SessionController.index
+GET     /sessions/open_id            controllers.SessionController.loginByOpenId(provider: models.account.OpenIdProvider)
+GET     /sessions/open_id/callback   controllers.SessionController.callbackFromOpenId(provider: models.account.OpenIdProvider)
+GET     /sessions/twitter          controllers.SessionController.loginByTwitter
+GET     /sessions/twitter/callback   controllers.SessionController.callbackFromTwitter
